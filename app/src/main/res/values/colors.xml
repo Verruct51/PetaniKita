@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="GreenPeta">#13BD1B</color>
     <color name="DarkGreenPeta">#187C1C</color>
+    <color name="Start_color">#00b09b</color>
+    <color name="end_color">#96c93d</color>
+    <color name="grey">#eefef3</color>
 </resources>
