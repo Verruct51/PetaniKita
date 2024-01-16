@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "990584705561",
+    "project_id": "petanikita-12",
+    "storage_bucket": "petanikita-12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990584705561:android:a490008114f1e54b909088",
+        "android_client_info": {
+          "package_name": "com.zoss.petanikita"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990584705561-3be90tjdinfem0er0k6013554rkem7rk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zoss.petanikita",
+            "certificate_hash": "2d295d4dfbd72e4ac705baf9745165e8fd92721c"
+          }
+        },
+        {
+          "client_id": "990584705561-t61rmmti874qka52hs6v1mtvpit209gb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrzpIYUV0zyOKdPVwtTb0q-eexZbUOcLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990584705561-87bctk2jlvtn4s0sf04cbhidffsd7tcc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
