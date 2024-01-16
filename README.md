@@ -30,6 +30,6 @@
 <p align="center"> 
   <div align="center">Total Visitors</div>
   <div align="center">
-    <img src="https://profile-counter.glitch.me/yaaqas/count.svg"/>
+    <img src="https://profile-counter.glitch.me/PetaniKita/count.svg"/>
   </div> 
 </p>
