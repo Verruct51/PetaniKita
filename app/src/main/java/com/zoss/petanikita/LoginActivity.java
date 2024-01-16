@@ -28,12 +28,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
-//    private EditText editEmail, editPassword;
-//    private Button btnLogin, btnRegister;
-//    private SignInButton btnGoogle;
-//    private ProgressDialog progressDialog;
-//    private FirebaseAuth mAuth;
-//    private GoogleSignInClient mGoogleSignInClient;
+    private EditText editEmail, editPassword;
+    private Button btnLogin, btnRegister;
+    private SignInButton btnGoogle;
+    private ProgressDialog progressDialog;
+    private FirebaseAuth mAuth;
+    private GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,13 +133,13 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//            reload();
-//        }
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            reload();
+        }
     }
 }
