@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/whyisn/PetaniKita/assets/116614424/22c7e5fe-c239-4efc-ba22-ef3133da026b" width="200" height="200">
+<img src="https://github.com/whyisn/PetaniKita/assets/116614424/abfd1e63-5396-4a7c-8c0b-6583b65e130b" width="200" height="200">
 </p>
 
 <p align="center">
