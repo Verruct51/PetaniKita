@@ -12,7 +12,9 @@
 
 <h2>🛠&nbsp;Description&nbsp;PetaniKita</h2><details><summary></summary>
 <div align="justify">
+```
 &nbsp;&nbsp;&nbsp;The innovative application "PetaniKita" embraces the needs of farmers and the general public in improving the efficiency of managing agricultural activities. The app's soil mapping feature provides deep insights into the potential of the land, determining whether it is suitable for planting. The meticulous scheduling feature reminds users of the right time to apply pesticides, fertilize, water, and even the harvest schedule. The AI chatbot (Rani), can help users explore specific information about agriculture. And the app's article feature highlights success stories from farmers, improving the "perception" of the farming profession and hopefully inspiring young farmers to get more involved.
+```
 </div>
 </details>
 
