@@ -79,15 +79,26 @@ public class MainActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         TextView textName = headerView.findViewById(R.id.name);
         Button btnlogout = headerView.findViewById(R.id.btn_logout);
-//        btnlogout = findViewById(R.id.btn_logout);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (firebaseUser!=null) {
-            textName.setText(firebaseUser.getDisplayName());
-        }else {
-            textName.setText("Login gagal!");
+            String fullName = firebaseUser.getDisplayName();
+            if (fullName != null && !fullName.isEmpty()) {
+                // Split nama pengguna berdasarkan spasi dan ambil nama depan
+                String[] parts = fullName.split(" ");
+                String firstName = parts[0];
+                // Set nama depan ke TextView
+                textName.setText(firstName);
+            } else {
+                // Handle jika nama pengguna tidak valid
+                textName.setText("User");
+            }
+//            textName.setText(firebaseUser.getDisplayName());
         }
+//        else {
+//            textName.setText("Login gagal!");
+//        }
 
         btnlogout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
