@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Architects+Daughter&color=00CC00&size=30&center=true&vCenter=true&width=600&height=65&lines=Assalamualaikum..&hearts;++;Introducing,++we+are;++PetaniKita😉;Zoss+Team;"></a>
+  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Architects+Daughter&color=00CC00&size=30&center=true&vCenter=true&width=600&height=65&lines=Haii,++Welcome++to++the++ZoSS+Team;Introducing,++we+are;++PetaniKita😉;Zoss+Team;"></a>
 </p>
  
 ```
