@@ -56,22 +56,18 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 int id = item.getItemId();
-                if (id==R.id.home) {
-                    Toast.makeText(MainActivity.this, "Home Selected!", Toast.LENGTH_SHORT).show();
-                } else if (id==R.id.schedule) {
-                    Toast.makeText(MainActivity.this, "Schedule Selected!", Toast.LENGTH_SHORT).show();
-                } else if (id==R.id.maps) {
-                    Toast.makeText(MainActivity.this, "Maps Selected!", Toast.LENGTH_SHORT).show();
-                } else if (id==R.id.tutorial) {
+                if (id==R.id.tutorial) {
                     Toast.makeText(MainActivity.this, "Tutorial Selected!", Toast.LENGTH_SHORT).show();
                 } else if (id==R.id.article) {
                     Toast.makeText(MainActivity.this, "Article Selected!", Toast.LENGTH_SHORT).show();
-                } else if (id==R.id.qna) {
-                    Toast.makeText(MainActivity.this, "QnA Selected!", Toast.LENGTH_SHORT).show();
-                } else if (id==R.id.disc) {
-                    Toast.makeText(MainActivity.this, "Discussion Selected!", Toast.LENGTH_SHORT).show();
-                } else if (id==R.id.forum) {
-                    Toast.makeText(MainActivity.this, "Discussion Forum Selected!", Toast.LENGTH_SHORT).show();
+                } else if (id==R.id.setting) {
+                    Toast.makeText(MainActivity.this, "Setting Selected!", Toast.LENGTH_SHORT).show();
+                } else if (id==R.id.share) {
+                    Toast.makeText(MainActivity.this, "Share Selected!", Toast.LENGTH_SHORT).show();
+                } else if (id==R.id.about) {
+                    Toast.makeText(MainActivity.this, "About Us Selected!", Toast.LENGTH_SHORT).show();
+                } else if (id==R.id.logout) {
+                    Toast.makeText(MainActivity.this, "Logout Forum Selected!", Toast.LENGTH_SHORT).show();
                 }
                 return false;
             }
