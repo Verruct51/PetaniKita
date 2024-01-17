@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
     <group android:checkableBehavior="single">
-        <item android:id="@+id/home"
-            android:icon="@drawable/baseline_home_24"
-            android:title="Home"/>
-        <item android:id="@+id/schedule"
-            android:icon="@drawable/baseline_home_24"
-            android:title="Schedule"/>
-        <item android:id="@+id/maps"
-            android:icon="@drawable/baseline_home_24"
-            android:title="Maps"/>
         <item android:id="@+id/tutorial"
             android:icon="@drawable/baseline_home_24"
             android:title="Tutorial"/>
         <item android:id="@+id/article"
             android:icon="@drawable/baseline_home_24"
             android:title="Article"/>
+        <item android:id="@+id/setting"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Setting"/>
     </group>
 
-    <item android:title="Community">
+    <item android:title="">
         <menu>
-            <group android:checkableBehavior="single">
-                <item android:id="@+id/qna"
-                    android:icon="@drawable/baseline_home_24"
-                    android:title="QnA"/>
-                <item android:id="@+id/disc"
-                    android:icon="@drawable/baseline_home_24"
-                    android:title="Discussion"/>
-                <item android:id="@+id/forum"
-                    android:icon="@drawable/baseline_home_24"
-                    android:title="Forum"/>
-            </group>
+            <item android:id="@+id/share"
+                android:icon="@drawable/baseline_home_24"
+                android:title="Share"/>
+            <item android:id="@+id/about"
+                android:icon="@drawable/baseline_home_24"
+                android:title="About Us"/>
+            <item android:id="@+id/logout"
+                android:icon="@drawable/baseline_home_24"
+                android:title="Logour"/>
         </menu>
     </item>
 
