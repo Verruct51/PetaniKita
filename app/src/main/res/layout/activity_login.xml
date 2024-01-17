@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/background_Login"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -12,29 +12,41 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="14dp">
+
+        <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/PetaniKita"
+                android:layout_gravity="center"/>
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="Login" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/DarkGreen"
+                android:layout_marginTop="20dp"
+                android:text="LOGIN"
+                android:layout_gravity="center"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
 
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="150dp"
-                android:textColorHint="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#618264"
                 android:theme="@style/EditScreenTextInputLayoutStyle">
             <EditText
                     android:id="@+id/email"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="55dp"
                     android:drawablePadding="16dp"
                     android:drawableStart="@drawable/ic_email"
                     android:hint="Email"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:textColor="@android:color/white"
+                    android:textColor="#618264"
                     android:textSize="16sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -42,54 +54,58 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:textColorHint="#FFFFFF"
+                android:textColorHint="#618264"
                 android:theme="@style/EditScreenTextInputLayoutStyle"
                 app:passwordToggleEnabled="true">
             <EditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="55dp"
                     android:drawablePadding="16dp"
                     android:drawableStart="@drawable/ic_lock"
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:textColor="@android:color/white"
+                    android:textColor="#618264"
                     android:textSize="16sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/btn_Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/buttonshape"
-            android:text="Login"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+               android:id="@+id/loginBtn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="16dp"
+               android:layout_marginTop="20dp"
+               android:background="@drawable/buttonshape"
+               android:text="Login"
+               android:textAllCaps="false"
+               android:textStyle="bold"
+               android:textColor="#618264"
+               android:textSize="16sp"/>
+
         <Button
-            android:id="@+id/btn_Register"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="16dp"
-            android:background="@drawable/buttonshape"
-            android:text="Register"
-            android:textAllCaps="false"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+               android:id="@+id/registerBtn"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginEnd="16dp"
+               android:layout_marginTop="10dp"
+               android:background="@drawable/buttonshape"
+               android:text="Register"
+               android:textAllCaps="false"
+               android:textStyle="bold"
+               android:textColor="#618264"
+               android:textSize="16sp"/>
+
+
+
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="150dp"
                 android:text="Or Login with"
                 android:textAlignment="center"
-                android:textColor="#96ffffff"
+                android:textColor="#d0e7d2"
                 android:textSize="16sp" />
 
 
@@ -97,7 +113,7 @@
             android:id="@+id/btn_Google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="20dp"/>
 
     </LinearLayout>
 
