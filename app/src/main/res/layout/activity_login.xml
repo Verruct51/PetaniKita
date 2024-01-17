@@ -20,65 +20,85 @@
             android:text="Login" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline">
-            <EditText
-                android:id="@+id/email"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:ems="10"
-                android:elevation="5dp"
-                android:paddingStart="13dp"
-                android:drawablePadding="10dp"
-                android:background="@drawable/custom_textlayout"
-                android:hint="Email"
-                android:inputType="textEmailAddress" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:textColorHint="#FFFFFF"
+                android:theme="@style/EditScreenTextInputLayoutStyle">
+            <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:drawablePadding="16dp"
+                    android:drawableStart="@drawable/ic_email"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            app:boxBackgroundColor="@color/white"
-            app:boxBackgroundMode="outline"
-            app:passwordToggleEnabled="true">
-            <EditText
-                android:id="@+id/password"
                 android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:ems="10"
-                android:elevation="5dp"
-                android:paddingStart="13dp"
-                android:drawablePadding="10dp"
-                android:background="@drawable/custom_textlayout"
-                android:hint="Password"
-                android:inputType="textPassword" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#FFFFFF"
+                android:theme="@style/EditScreenTextInputLayoutStyle"
+                app:passwordToggleEnabled="true">
+            <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawablePadding="16dp"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btn_Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/GreenPeta"
-            android:textColor="@color/white"
-            android:text="Login" />
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/buttonshape"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
         <Button
             android:id="@+id/btn_Register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/DarkGreenPeta"
-            android:textColor="@color/white"
-            android:text="Register" />
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/buttonshape"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Or Login with"
+                android:textAlignment="center"
+                android:textColor="#96ffffff"
+                android:textSize="16sp" />
+
+
         <com.google.android.gms.common.SignInButton
             android:id="@+id/btn_Google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"/>
+            android:layout_marginTop="30dp"/>
 
     </LinearLayout>
 

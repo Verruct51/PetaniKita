@@ -7,4 +7,10 @@
     <color name="Start_color">#00b09b</color>
     <color name="end_color">#96c93d</color>
     <color name="grey">#eefef3</color>
+    <color name="green">#00bf8f</color>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="textInputLayout">#96ffffff</color>
 </resources>
