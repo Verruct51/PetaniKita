@@ -8,11 +8,12 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
+
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -21,10 +22,24 @@
             android:background="@color/bgMenu"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/Theme.AppCompat.Light"/>
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="0dp"
+                android:backgroundTint="@color/black"
+                android:text="Logout"
+                android:textColor="@color/white" />
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/frame_layout"/>
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -36,19 +51,6 @@
         app:itemIconTint="@color/bgMenu"
         app:itemTextColor="@color/bgMenu"
         android:layout_gravity="start"/>
-
-<!--    <Button-->
-<!--            android:id="@+id/btn_logout"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_alignParentBottom="true"-->
-<!--            android:layout_marginTop="14dp"-->
-<!--            android:layout_marginStart="14dp"-->
-<!--            android:layout_marginEnd="14dp"-->
-<!--            android:layout_marginBottom="14dp"-->
-<!--            android:backgroundTint="@color/black"-->
-<!--            android:text="Logout"-->
-<!--            android:textColor="@color/white" />-->
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"

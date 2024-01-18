@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         TextView textName = headerView.findViewById(R.id.name);
         TextView textEmail = headerView.findViewById(R.id.email);
-//        Button btnlogout = headerView.findViewById(R.id.btn_logout);
+        Button btnlogout = findViewById(R.id.btn_logout);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -136,11 +136,11 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 
-//        btnlogout.setOnClickListener(v -> {
-//            FirebaseAuth.getInstance().signOut();
-//            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-//            finish();
-//        });
+        btnlogout.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            finish();
+        });
     }
 
     @Override

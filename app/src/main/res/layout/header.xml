@@ -8,24 +8,24 @@
     android:gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/petanikita"/>
-
 <!--    <Button-->
 <!--        android:id="@+id/btn_logout"-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->
 <!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginTop="14dp"-->
-<!--        android:layout_marginStart="14dp"-->
-<!--        android:layout_marginEnd="14dp"-->
-<!--        android:layout_marginBottom="14dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginStart="200dp"-->
+<!--        android:layout_marginEnd="15dp"-->
+<!--        android:layout_marginBottom="0dp"-->
 <!--        android:backgroundTint="@color/black"-->
 <!--        android:text="Logout"-->
 <!--        android:textColor="@color/white" />-->
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/petanikita"/>
 
     <TextView
         android:id="@+id/name"
