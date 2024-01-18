@@ -37,7 +37,7 @@ From : Universitas Negeri Padang
 <img src="https://github.com/whyisn/PetaniKita/assets/151505354/fa7513b0-6979-4d54-b6ba-86b4af1ec636" width="200" height="400">
 
 Login with:<br>
-Email: zoneofsimpesite@gmail.com<br>
+Email: zoneofsimplesite@gmail.com<br>
 Pass: 123456<br>
 You can also register or login with Google Account
 
