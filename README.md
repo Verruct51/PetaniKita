@@ -12,8 +12,29 @@
 
 <h2>🛠&nbsp;Description&nbsp;PetaniKita</h2><details><summary></summary>
 <div align="justify">
-&nbsp;&nbsp;&nbsp;The innovative application "PetaniKita" embraces the needs of farmers and the general public in improving the efficiency of managing agricultural activities. The app's soil mapping feature provides deep insights into the potential of the land, determining whether it is suitable for planting. The meticulous scheduling feature reminds users of the right time to apply pesticides, fertilize, water, and even the harvest schedule. The AI chatbot (Rani), can help users explore specific information about agriculture. And the app's article feature highlights success stories from farmers, improving the "perception" of the farming profession and hopefully inspiring young farmers to get more involved.
+&nbsp;&nbsp;&nbsp;The innovative application "PetaniKita" embraces the needs of farmers and the general public in improving the efficiency of managing agricultural activities. The app's soil mapping feature provides deep insights into the potential of the land, determining whether it is suitable for planting. The meticulous scheduling feature reminds users of the right time to apply pesticides, fertilize, water, and even the harvest schedule. The AI chatbot (Rani), can help users explore specific information about agriculture. And the app's article feature highlights success stories from farmers, improving the "perception" of the farming profession and hopefully inspiring young farmers to get more involved. 
 </div>
+  
+<div align="justify">
+  <br> team name : ZoSS <br>
+  members :  Az Zahra Lishani Salsabila,  Delvira Khulkhairat,  Yazid Aqil Assalam,  Wahyu Isnan  <br>
+  from : Universitas Negeri Padang <br>
+</div>
+
+
+<br>
+<img src="https://github.com/whyisn/PetaniKita/assets/151505354/5d140a7d-50aa-49cf-b00e-72c1f1d8a935" width="200" height="400">
+&nbsp;&nbsp;
+<img src="https://github.com/whyisn/PetaniKita/assets/151505354/ce9f6b05-d6d6-4927-a752-a3a1ed737e11" width="200" height="400">
+&nbsp;&nbsp;
+<img src="https://github.com/whyisn/PetaniKita/assets/151505354/a695b48a-229e-4a2d-abb1-8a604c0d2c13" width="200" height="400">
+<br> 
+<br>
+<img src="https://github.com/whyisn/PetaniKita/assets/151505354/ba514a31-d5b0-4ef5-8da5-b90bf093b0aa" width="200" height="400">
+&nbsp;&nbsp;
+<img src="https://github.com/whyisn/PetaniKita/assets/151505354/fa7513b0-6979-4d54-b6ba-86b4af1ec636" width="200" height="400">
+
+
 </details>
 
 ---
