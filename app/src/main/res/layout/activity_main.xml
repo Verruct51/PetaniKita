@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:openDrawer="start"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -18,13 +18,13 @@
             android:layout_height="56dp"
             android:id="@+id/toolbar"
             android:elevation="4dp"
-            android:background="@color/Lavender"
+            android:background="@color/bgMenu"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/Theme.AppCompat.Light"/>
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fragment_container"/>
+            android:id="@+id/frame_layout"/>
 
     </LinearLayout>
 
@@ -34,10 +34,9 @@
         android:layout_height="match_parent"
         app:headerLayout="@layout/header"
         app:menu="@menu/nav_menu"
-        app:itemIconTint="@color/DarkGreenPeta"
-        app:itemTextColor="@color/DarkGreenPeta"
+        app:itemIconTint="@color/bgMenu"
+        app:itemTextColor="@color/bgMenu"
         android:layout_gravity="start"/>
-
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -71,7 +70,7 @@
             app:layout_anchor="@id/bottomAppBar"
             app:maxImageSize="40dp"
             android:id="@+id/fab"
-            app:tint="@color/black"/>
+            app:tint="@color/black" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

@@ -11,8 +11,9 @@
     <ImageView
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/PetaniKita"/>
+        android:scaleType="centerCrop"/>
+<!--        android:src="@drawable/PetaniKita"-->
+<!--        />-->
 
 <!--    <Button-->
 <!--        android:id="@+id/btn_logout"-->
@@ -35,6 +36,7 @@
         android:textStyle="bold"
         android:text="ZoSS"/>
     <TextView
+        android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Zone of Simple Site (ZoSS) Team"
