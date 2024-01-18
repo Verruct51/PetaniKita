@@ -100,12 +100,14 @@ public class MainActivity extends AppCompatActivity {
 
         View headerView = navigationView.getHeaderView(0);
         TextView textName = headerView.findViewById(R.id.name);
+        TextView textEmail = headerView.findViewById(R.id.email);
 //        Button btnlogout = headerView.findViewById(R.id.btn_logout);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if (firebaseUser!=null) {
             String fullName = firebaseUser.getDisplayName();
+            textEmail.setText(firebaseUser.getEmail());
             if (fullName != null && !fullName.isEmpty()) {
                 // Split nama pengguna berdasarkan spasi dan ambil nama depan
                 String[] parts = fullName.split(" ");
@@ -114,7 +116,8 @@ public class MainActivity extends AppCompatActivity {
                 textName.setText(firstName);
             } else {
                 // Handle jika nama pengguna tidak valid
-                textName.setText("User");
+                textName.setText("ZoSS");
+                textEmail.setText("Zone of Simple Site (ZoSS) Team");
             }
 //            textName.setText(firebaseUser.getDisplayName());
         }
