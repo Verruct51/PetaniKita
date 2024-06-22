@@ -99,7 +99,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="180dp"
             android:text="Or Login with"
             android:textAlignment="center"
             android:textColor="#d0e7d2"
@@ -110,7 +110,7 @@
             android:id="@+id/btn_Google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp" />
 
     </LinearLayout>
 
