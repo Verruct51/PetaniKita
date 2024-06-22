@@ -15,7 +15,8 @@
         <activity
             android:name=".RegisterActivity"
             android:exported="true"
-            android:label="Register"/>
+            android:label="Register"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true"
