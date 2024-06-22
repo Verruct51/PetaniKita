@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout = findViewById(R.id.drawer_layout);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.inflateMenu(R.menu.bottom_menu);
         fab = findViewById(R.id.fab);
         navigationView = findViewById(R.id.nav_menu);
         toolbar = findViewById(R.id.toolbar);
