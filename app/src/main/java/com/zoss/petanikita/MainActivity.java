@@ -119,22 +119,22 @@ public class MainActivity extends AppCompatActivity {
                 textName.setText("ZoSS");
                 textEmail.setText("Zone of Simple Site (ZoSS) Team");
             }
-//            textName.setText(firebaseUser.getDisplayName());
+            textName.setText(firebaseUser.getDisplayName());
         }
-//        else {
-//            textName.setText("Login gagal!");
-//        }
+        else {
+            textName.setText("Login gagal!");
+        }
 
-//        MenuItem logoutItem = navigationView.getMenu().findItem(R.id.logout);
-//        logoutItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-//            @Override
-//            public boolean onMenuItemClick(@NonNull MenuItem item) {
-//                FirebaseAuth.getInstance().signOut();
-//                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-//                finish();
-//                return true;
-//            }
-//        });
+        MenuItem logoutItem = navigationView.getMenu().findItem(R.id.logout);
+        logoutItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(@NonNull MenuItem item) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                finish();
+                return true;
+            }
+        });
 
         btnlogout.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();

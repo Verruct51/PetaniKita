@@ -15,4 +15,5 @@
     <color name="softGreen">#b0d9b1</color>
     <color name="textInputLayout">#96ffffff</color>
     <color name="transparant">#00FFFFFF</color>
+    <color name="bluelight">#0096FF</color>
 </resources>
