@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".Article">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,65 +22,40 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/Theme.AppCompat.Light"/>
 
-        <Button
-            android:id="@+id/btnlogout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="200dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="@color/black"
-            android:text="Logout"
-            android:textColor="@color/white" />
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/frame_layout">
 
-            <!-- New Layout for Article -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="600dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/article_title"
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="24sp"
-                    android:textStyle="bold"
-                    android:text="Article Title"
-                    android:paddingBottom="8dp"/>
-
+                    android:layout_height="400dp" />
                 <ImageView
-                    android:id="@+id/article_image"
+                    android:id="@+id/bmkg"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/article_image"/>
+                    android:src="@drawable/bmkg1">
 
-                <TextView
-                    android:id="@+id/article_content"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:paddingTop="8dp"
-                    android:text="Article content goes here..."/>
-
+                </ImageView>
             </LinearLayout>
 
         </FrameLayout>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_menu"
+        android:id="@+id/nav_article"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:headerLayout="@layout/header"
-        app:menu="@menu/nav_menu"
+        app:menu="@menu/nav_article"
         app:itemIconTint="@color/bgMenu"
         app:itemTextColor="@color/bgMenu"
         android:layout_gravity="start"/>
@@ -118,8 +93,8 @@
             app:layout_anchor="@+id/bottomAppBar"
             app:layout_anchorGravity="top|center"
             app:maxImageSize="40dp"
-            app:tint="@color/colorPrimary" />
+            app:tint="@color/colorPrimary"
+            android:contentDescription="Tambahkan item baru"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </androidx.drawerlayout.widget.DrawerLayout>
