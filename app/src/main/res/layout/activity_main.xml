@@ -22,18 +22,18 @@
             android:background="@color/bgMenu"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/Theme.AppCompat.Light"/>
-            <Button
-                android:id="@+id/btn_logout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="0dp"
-                android:backgroundTint="@color/black"
-                android:text="Logout"
-                android:textColor="@color/white" />
+<!--            <Button-->
+<!--                android:id="@+id/btn_logout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginStart="200dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:layout_marginBottom="0dp"-->
+<!--                android:backgroundTint="@color/black"-->
+<!--                android:text="Logout"-->
+<!--                android:textColor="@color/white" />-->
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -83,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
-            android:src="@drawable/baseline_home_24"
+            android:src="@drawable/icons8_chatbot_64__xhdpi_"
             app:layout_anchor="@+id/bottomAppBar"
             app:layout_anchorGravity="top|center"
             app:maxImageSize="40dp"
