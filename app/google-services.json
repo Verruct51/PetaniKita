@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "990584705561",
+    "firebase_url": "https://petanikita-12-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "petanikita-12",
     "storage_bucket": "petanikita-12.appspot.com"
   },
@@ -14,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "990584705561-3be90tjdinfem0er0k6013554rkem7rk.apps.googleusercontent.com",
+          "client_id": "990584705561-rbkjg0nqlivkn2ogib68haavedetum0o.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.zoss.petanikita",
-            "certificate_hash": "2d295d4dfbd72e4ac705baf9745165e8fd92721c"
+            "certificate_hash": "2b1be27a1503b7f841e911e70684d0fdd353fd19"
           }
         },
         {
