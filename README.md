@@ -7,7 +7,7 @@
 </p>
  
 ```
-✍️ Created by PetaniKita (ZoSS Team)
+✍️ Created by Community Farm (TryError Team)
 ```
 
 <h2>🛠&nbsp;Description&nbsp;PetaniKita</h2><details><summary></summary>
@@ -16,11 +16,12 @@
 </div>
 
 ```
-Team : ZoSS (Zone of Simple Site) Team
-Members : Az Zahra Lishani Salsabila
-          Delvira Khulkhairat
-          Yazid Aqil Assalam
+Team : Community Farm Team
+Members : Ahmad Al-Hafidz Ramadhan
+          Alvin Anugerah Pratama
+          Ray Fadly Hadi
           Wahyu Isnan
+          Yazid Aqil Assalam
 From : Universitas Negeri Padang
 ```
 
