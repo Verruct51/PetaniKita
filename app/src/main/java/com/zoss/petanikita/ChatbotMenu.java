@@ -1,13 +1,16 @@
 package com.zoss.petanikita;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -28,7 +31,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class ChatbotMenu extends AppCompatActivity {
+public class ChatbotMenu extends Fragment {
     RecyclerView recyclerView;
     TextView welcomeTextView;
     EditText messageEditText;
@@ -38,21 +41,21 @@ public class ChatbotMenu extends AppCompatActivity {
     public static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
     OkHttpClient client = new OkHttpClient();
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.chatbot_menu);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.chatbot_menu, container, false);
         messageList = new ArrayList<>();
 
-        recyclerView = findViewById(R.id.recycler_view);
-        welcomeTextView = findViewById(R.id.welcome_text);
-        messageEditText = findViewById(R.id.message_edit_text);
-        sendButton = findViewById(R.id.send_btn);
+        recyclerView = view.findViewById(R.id.recycler_view);
+        welcomeTextView = view.findViewById(R.id.welcome_text);
+        messageEditText = view.findViewById(R.id.message_edit_text);
+        sendButton = view.findViewById(R.id.send_btn);
 
         //setup recycler view
         messageAdapter = new MessageAdapter(messageList);
         recyclerView.setAdapter(messageAdapter);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        LinearLayoutManager llm = new LinearLayoutManager(getContext());
         llm.setStackFromEnd(true);
         recyclerView.setLayoutManager(llm);
 
@@ -65,10 +68,12 @@ public class ChatbotMenu extends AppCompatActivity {
                 welcomeTextView.setVisibility(View.GONE);
             }
         });
+
+        return view;
     }
 
     void addToChat(String message, String sendBy) {
-        runOnUiThread(() -> {
+        getActivity().runOnUiThread(() -> {
             messageList.add(new Message(message, sendBy));
             messageAdapter.notifyDataSetChanged();
             recyclerView.smoothScrollToPosition(messageAdapter.getItemCount());
