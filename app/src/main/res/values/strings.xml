@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">PetaniKita</string>
-    <string name="webClientId">990584705561-87bctk2jlvtn4s0sf04cbhidffsd7tcc.apps.googleusercontent.com</string>
+    <string name="app_name">Community Farm</string>
+<!--    <string name="webClientId">990584705561-87bctk2jlvtn4s0sf04cbhidffsd7tcc.apps.googleusercontent.com</string>-->
+    <string name="webClientId">990584705561-t61rmmti874qka52hs6v1mtvpit209gb.apps.googleusercontent.com</string>
     <string name="openNav">Open Navigation Drawer</string>
     <string name="closeNav">Close Navigation Drawer</string>
 </resources>

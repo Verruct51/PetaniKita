@@ -39,13 +39,13 @@ android {
 
 dependencies {
 
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation(platform("com.google.firebase:firebase-bom:33.1.1"))
     implementation("com.google.firebase:firebase-analytics")
-    implementation ("com.google.firebase:firebase-auth:22.3.0")
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
-    implementation ("com.google.firebase:firebase-messaging:23.4.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
+    implementation("com.google.firebase:firebase-auth:23.0.0")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
+    implementation ("com.google.firebase:firebase-messaging:24.0.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
