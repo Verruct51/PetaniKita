@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         View headerView = navigationView.getHeaderView(0);
         TextView textName = headerView.findViewById(R.id.name);
         TextView textEmail = headerView.findViewById(R.id.email);
-        Button btnlogout = findViewById(R.id.btn_logout);
+        Button btnlogout = findViewById(R.id.btnlogout);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
