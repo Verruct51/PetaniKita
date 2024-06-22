@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/article1"
+        android:icon="@drawable/baseline_article_1"
+        android:title="Artikel 1"/>
+    <item
+        android:id="@+id/article2"
+        android:icon="@drawable/baseline_article_2"
+        android:title="Artikel 2"/>
+    <item
+        android:id="@+id/article3"
+        android:icon="@drawable/baseline_article_3"
+        android:title="Artikel 3"/>
+</menu>

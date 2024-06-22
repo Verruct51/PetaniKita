@@ -32,7 +32,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
@@ -105,21 +105,19 @@ public class MainActivity extends AppCompatActivity {
             int id = item.getItemId();
             if (id == R.id.home) {
                 // Handle home navigation
-                Toast.makeText(MainActivity.this, "Home Selected!", Toast.LENGTH_SHORT).show();
-                // Replace with your desired action for Home
             } else if (id == R.id.schedule) {
                 // Handle schedule navigation
-                Toast.makeText(MainActivity.this, "Schedule Selected!", Toast.LENGTH_SHORT).show();
-                // Replace with your desired action for Schedule
             } else if (id == R.id.maps) {
                 // Load map fragment
                 loadMapFragment();
             } else if (id == R.id.community) {
-                // Load community fragment
-                loadCommunityMenuFragment();
+                // Handle community navigation
             }
             return true;
         });
+
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(v -> loadChat);
 
         View headerView = navigationView.getHeaderView(0);
         TextView textName = headerView.findViewById(R.id.name);
@@ -147,13 +145,6 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
-//    @Override
-//    public boolean onCreateOptionMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.nav_menu, menu);
-//        return true;
-//    }
-
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -169,19 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 .beginTransaction()
                 .replace(R.id.frame_layout, mapFragment)
                 .commit();
-        mapFragment.getMapAsync(googleMap -> {
-            LatLng location = new LatLng(-0.91482985, 100.45880158);
-            googleMap.addMarker(new MarkerOptions().position(location).title("Auditorium UNAND"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12));
-        });
-    }
-
-    private void loadCommunityMenuFragment() {
-        CommunityMenuFragment communityMenuFragment = new CommunityMenuFragment();
-        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frame_layout, communityMenuFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        mapFragment.getMapAsync(this);
     }
 
     private void loadFragment(Fragment fragment) {
@@ -190,5 +169,13 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.frame_layout, fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        gMap = googleMap;
+        LatLng location = new LatLng(-0.91482985, 100.45880158);
+        gMap.addMarker(new MarkerOptions().position(location).title("Auditorium UNAND"));
+        gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12));
     }
 }
