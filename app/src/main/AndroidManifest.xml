@@ -20,7 +20,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:label="Login"
+            android:label="CoFarm"
             android:windowSoftInputMode="adjustPan">
 
         <intent-filter>
