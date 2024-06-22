@@ -27,19 +27,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
-
-        <Button
-            android:id="@+id/btnlogout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="300dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="0dp"
-            android:backgroundTint="@color/black"
-            android:text="Logout"
-            android:textColor="@color/white" />
-
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -86,7 +73,5 @@
             app:layout_anchorGravity="top|center"
             app:maxImageSize="40dp"
             app:tint="@color/colorPrimary"/>
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </androidx.drawerlayout.widget.DrawerLayout>

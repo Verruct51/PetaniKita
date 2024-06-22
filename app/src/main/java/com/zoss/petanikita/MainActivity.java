@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
@@ -16,31 +17,22 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     DrawerLayout drawerLayout;
     BottomNavigationView bottomNavigationView;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
-    FloatingActionButton fab;
     private FirebaseUser firebaseUser;
-    private GoogleMap gMap;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -68,14 +60,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
 
-        fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loadFragment(new ChatbotMenu());
-            }
-        });
-
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.tutorial) {
@@ -98,26 +82,28 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 }
             }
             drawerLayout.closeDrawer(GravityCompat.START);
-            return false;
+            return true; // Changed to true to indicate the event was handled
         });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.home) {
                 // Handle home navigation
+                Toast.makeText(MainActivity.this, "Home Selected!", Toast.LENGTH_SHORT).show();
+                // Replace with your desired action for Home
             } else if (id == R.id.schedule) {
                 // Handle schedule navigation
+                Toast.makeText(MainActivity.this, "Schedule Selected!", Toast.LENGTH_SHORT).show();
+                // Replace with your desired action for Schedule
             } else if (id == R.id.maps) {
                 // Load map fragment
                 loadMapFragment();
             } else if (id == R.id.community) {
-                // Handle community navigation
+                // Load community fragment
+                loadCommunityMenuFragment();
             }
             return true;
         });
-
-//        FloatingActionButton fab = findViewById(R.id.fab);
-//        fab.setOnClickListener(v -> loadChat);
 
         View headerView = navigationView.getHeaderView(0);
         TextView textName = headerView.findViewById(R.id.name);
@@ -137,12 +123,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 textEmail.setText("Zone of Simple Site (ZoSS) Team");
             }
         }
-
-        findViewById(R.id.btnlogout).setOnClickListener(v -> {
-            FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-            finish();
-        });
     }
 
     @Override
@@ -160,22 +140,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .beginTransaction()
                 .replace(R.id.frame_layout, mapFragment)
                 .commit();
-        mapFragment.getMapAsync(this);
+        mapFragment.getMapAsync(googleMap -> {
+            LatLng location = new LatLng(-0.91482985, 100.45880158);
+            googleMap.addMarker(new MarkerOptions().position(location).title("Auditorium UNAND"));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12));
+        });
     }
 
-    private void loadFragment(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-    }
-
-    @Override
-    public void onMapReady(@NonNull GoogleMap googleMap) {
-        gMap = googleMap;
-        LatLng location = new LatLng(-0.91482985, 100.45880158);
-        gMap.addMarker(new MarkerOptions().position(location).title("Auditorium UNAND"));
-        gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 12));
+    private void loadCommunityMenuFragment() {
+        CommunityMenuFragment communityMenuFragment = new CommunityMenuFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout, communityMenuFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 }
