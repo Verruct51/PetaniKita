@@ -19,7 +19,7 @@
             android:label="Register"
             android:windowSoftInputMode="adjustPan"/>
         <activity
-            android:name=".ChatbotMenu"
+            android:name=".LoginActivity"
             android:exported="true"
             android:label="CoFarm"
             android:windowSoftInputMode="adjustPan">
