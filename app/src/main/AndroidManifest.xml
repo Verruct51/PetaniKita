@@ -19,7 +19,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:label="Logn"
+            android:label="Login"
             android:windowSoftInputMode="adjustPan">
 
         <intent-filter>
