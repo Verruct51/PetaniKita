@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".CommunityMenu">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,7 +22,6 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/Theme.AppCompat.Light" />
 
-        <!-- Menambahkan ConstraintLayout yang berisi kotak-kotak -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="337dp"
             android:layout_height="612dp"
@@ -35,9 +34,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="84dp"
                 android:background="@drawable/box_background"
-                app:layout_constraintStart_margin="182dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_margin="71dp"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
@@ -72,9 +69,7 @@
                 android:layout_marginStart="176dp"
                 android:layout_marginTop="84dp"
                 android:background="@drawable/box_background"
-                app:layout_constraintStart_margin="19dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_margin="305dp"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
@@ -109,9 +104,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="316dp"
                 android:background="@drawable/box_background"
-                app:layout_constraintStart_margin="182dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_margin="305dp"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
@@ -146,9 +139,7 @@
                 android:layout_marginStart="176dp"
                 android:layout_marginTop="316dp"
                 android:background="@drawable/box_background"
-                app:layout_constraintStart_margin="19dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_margin="71dp"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
