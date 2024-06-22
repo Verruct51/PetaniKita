@@ -16,6 +16,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -23,6 +27,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     BottomNavigationView bottomNavigationView;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
+    FloatingActionButton fab;
     private FirebaseUser firebaseUser;
     private GoogleMap gMap;
 
@@ -61,6 +67,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                loadFragment(new ChatbotMenu());
+            }
+        });
 
         navigationView.setNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
@@ -101,6 +115,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
             return true;
         });
+
+//        FloatingActionButton fab = findViewById(R.id.fab);
+//        fab.setOnClickListener(v -> loadChat);
 
         View headerView = navigationView.getHeaderView(0);
         TextView textName = headerView.findViewById(R.id.name);
@@ -144,6 +161,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 .replace(R.id.frame_layout, mapFragment)
                 .commit();
         mapFragment.getMapAsync(this);
+    }
+
+    private void loadFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frame_layout, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     @Override
