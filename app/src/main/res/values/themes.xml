@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.PetaniKita" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
     </style>
 
     <style name="DialogAnimation">
