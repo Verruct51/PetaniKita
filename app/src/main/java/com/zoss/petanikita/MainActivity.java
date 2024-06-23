@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 // Handle home navigation
                 Toast.makeText(MainActivity.this, "Home Selected!", Toast.LENGTH_SHORT).show();
                 // Replace with your desired action for Home
+                loadArticleFragment();
             } else if (id == R.id.schedule) {
                 // Handle schedule navigation
                 Toast.makeText(MainActivity.this, "Schedule Selected!", Toast.LENGTH_SHORT).show();
@@ -153,5 +154,11 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_layout, communityMenuFragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+    private void loadArticleFragment() {
+        Article articleFragment = new Article();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame_layout, articleFragment)
+                .commit();
     }
 }
