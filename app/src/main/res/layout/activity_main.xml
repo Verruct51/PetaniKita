@@ -26,7 +26,27 @@
             android:id="@+id/frame_layout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1">
+
+            <!-- Tempatkan tombol logout di tengah-tengah frame layout -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fab_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:backgroundTint="@color/colorAccent"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                app:iconTint="@color/white"
+                app:iconGravity="textEnd"
+                app:cornerRadius="28dp" />
+
+        </FrameLayout>
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -73,5 +93,6 @@
             app:layout_anchorGravity="top|center"
             app:maxImageSize="40dp"
             app:tint="@color/colorPrimary"/>
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
