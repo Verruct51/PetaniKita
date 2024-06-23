@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
@@ -22,6 +21,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.tutorial) {
                 Toast.makeText(MainActivity.this, "Tutorial Selected!", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.article) {
-                Toast.makeText(MainActivity.this, "Article Selected!", Toast.LENGTH_SHORT).show();
+                // Handle article navigation
             } else if (id == R.id.setting) {
                 Toast.makeText(MainActivity.this, "Setting Selected!", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.share) {
@@ -73,33 +73,22 @@ public class MainActivity extends AppCompatActivity {
             } else if (id == R.id.about) {
                 Toast.makeText(MainActivity.this, "About Us Selected!", Toast.LENGTH_SHORT).show();
             } else if (id == R.id.logout) {
-                try {
-                    FirebaseAuth.getInstance().signOut();
-                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-                    finish();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                logoutUser();
             }
             drawerLayout.closeDrawer(GravityCompat.START);
-            return true; // Changed to true to indicate the event was handled
+            return true;
         });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.home) {
-                // Handle home navigation
                 Toast.makeText(MainActivity.this, "Home Selected!", Toast.LENGTH_SHORT).show();
-                // Replace with your desired action for Home
+                // Handle home navigation
             } else if (id == R.id.schedule) {
-                // Handle schedule navigation
-                Toast.makeText(MainActivity.this, "Schedule Selected!", Toast.LENGTH_SHORT).show();
-                // Replace with your desired action for Schedule
+                loadScheduleFragment();
             } else if (id == R.id.maps) {
-                // Load map fragment
                 loadMapFragment();
             } else if (id == R.id.community) {
-                // Load community fragment
                 loadCommunityMenuFragment();
             }
             return true;
@@ -123,6 +112,9 @@ public class MainActivity extends AppCompatActivity {
                 textEmail.setText("Zone of Simple Site (ZoSS) Team");
             }
         }
+
+        findViewById(R.id.fab).setOnClickListener(v -> loadChatbotMenuFragment());
+        findViewById(R.id.fab_logout).setOnClickListener(v -> logoutUser());
     }
 
     @Override
@@ -153,5 +145,31 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_layout, communityMenuFragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    private void loadChatbotMenuFragment() {
+        ChatbotMenu chatbotMenuFragment = new ChatbotMenu();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout, chatbotMenuFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void loadScheduleFragment() {
+        ScheduleMenuFragment scheduleFragment = new ScheduleMenuFragment();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_layout, scheduleFragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    private void logoutUser() {
+        try {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+            finish();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
