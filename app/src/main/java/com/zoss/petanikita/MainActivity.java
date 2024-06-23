@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.home) {
                 Toast.makeText(MainActivity.this, "Home Selected!", Toast.LENGTH_SHORT).show();
                 // Handle home navigation
+                loadArticleFragment();
             } else if (id == R.id.schedule) {
                 loadScheduleFragment();
             } else if (id == R.id.maps) {
@@ -161,6 +162,13 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.frame_layout, scheduleFragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    private void loadArticleFragment() {
+        Article articleFragment = new Article();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame_layout, articleFragment)
+                .commit();
     }
 
     private void logoutUser() {
