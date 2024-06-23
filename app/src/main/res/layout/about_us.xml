@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/transparant"
+    tools:context=".AboutUs">
+
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"
+        android:text="9:30"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeTextView"
+        android:layout_marginTop="16dp"
+        android:background="#ffffff"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/petanikita"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconImageView"
+            android:layout_centerHorizontal="true"
+            android:text="Community Farm"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginTop="16dp"
+            android:text="Community Farm mengembangkan aplikasi mobile dengan fitur analisis lahan, rekomendasi tanaman, panduan pemupukan/penyiraman, dan penjadwalan kalender pintar. Aplikasi ini membantu petani mengoptimalkan sumber daya dan memberikan wawasan berbasis data untuk memaksimalkan hasil panen.
+
+Community Farm menggunakan alat pengukuran untuk mengevaluasi dampak solusinya. Survei petani dan data hasil panen mengukur peningkatan produktivitas, sementara analisis penggunaan aplikasi dan ulasan pengguna memberikan wawasan terperinci tentang keterlibatan dan kepuasan pengguna.
+
+Community Farm menawarkan nilai unik untuk setiap segmen pelanggan dalam ekosistem pertanian, meningkatkan produktivitas, efisiensi, dan kemajuan sektor ini secara keseluruhan."
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descriptionTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#e53935"
+            android:text="KEMBALI"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+</RelativeLayout>
