@@ -1,15 +1,18 @@
 package com.zoss.petanikita;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomappbar.BottomAppBar;
@@ -17,9 +20,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
-public class Article extends AppCompatActivity {
-
-    private static final String TAG = "Article";
+public class Article extends Fragment {
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
@@ -33,7 +34,6 @@ public class Article extends AppCompatActivity {
     private ImageView articleImage;
     private TextView articleContent;
 
-
     // Data artikel yang akan ditampilkan
     private String[] articleTitles = {"Super KAYA", "PETANI UNTUNG 20JT ??", "SUPLAI JERUK HINGGA 1,2 TON ??"};
     private int[] articleImages = {R.drawable.artikel1, R.drawable.artikel2, R.drawable.artikel3};
@@ -43,25 +43,23 @@ public class Article extends AppCompatActivity {
             "Solo, 12 Juli 2019 – Rizal Fahreza, seorang petani muda yang sukses, dikenal sebagai penyedia jeruk terbesar dengan pasokan harian mencapai 1,2 ton atau setara dengan 400 dus. Kesuksesannya dalam sektor pertanian buah-buahan membuat Rizal.."
     };
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.article);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.article, container, false);
 
         // Inisialisasi komponen
-        drawerLayout = findViewById(R.id.drawer_layout);
-        toolbar = findViewById(R.id.toolbar);
-        navigationView = findViewById(R.id.nav_article);
-        bottomAppBar = findViewById(R.id.bottomAppBar);
-        bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        fab = findViewById(R.id.fab);
-        viewPager = findViewById(R.id.viewPager);
+        drawerLayout = view.findViewById(R.id.drawer_layout);
+        toolbar = view.findViewById(R.id.toolbar);
+        navigationView = view.findViewById(R.id.nav_article);
+        bottomAppBar = view.findViewById(R.id.bottomAppBar);
+        bottomNavigationView = view.findViewById(R.id.bottomNavigationView);
+        fab = view.findViewById(R.id.fab);
+        viewPager = view.findViewById(R.id.viewPager);
 
-        setSupportActionBar(toolbar);
         // Setup ViewPager2
         ArticleSlideAdapter adapter = new ArticleSlideAdapter(articleTitles, articleImages, articleContents);
         viewPager.setAdapter(adapter);
-
 
         // Setup click listener untuk NavigationView
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -80,5 +78,7 @@ public class Article extends AppCompatActivity {
                 return true;
             }
         });
+
+        return view;
     }
 }
