@@ -23,5 +23,4 @@ public class AboutUs extends AppCompatActivity {
             }
         });
     }
-    //Apa aja
 }
