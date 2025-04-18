@@ -27,6 +27,7 @@ From : Universitas Negeri Padang
 ```
 
 <br>
+<p>
 <img src="https://github.com/whyisn/PetaniKita/assets/151505354/5d140a7d-50aa-49cf-b00e-72c1f1d8a935" width="200" height="400">
 &nbsp;&nbsp;
 <img src="https://github.com/whyisn/PetaniKita/assets/151505354/ce9f6b05-d6d6-4927-a752-a3a1ed737e11" width="200" height="400">
@@ -34,6 +35,7 @@ From : Universitas Negeri Padang
 <img src="https://github.com/whyisn/PetaniKita/assets/151505354/a695b48a-229e-4a2d-abb1-8a604c0d2c13" width="200" height="400">
 &nbsp;&nbsp;
 <img src="https://github.com/whyisn/PetaniKita/assets/151505354/ba514a31-d5b0-4ef5-8da5-b90bf093b0aa" width="200" height="400">
+</p>
 <br>
 <br>
 <p>
