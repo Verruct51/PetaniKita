@@ -32,12 +32,17 @@ From : Universitas Negeri Padang
 <img src="https://github.com/whyisn/PetaniKita/assets/151505354/ce9f6b05-d6d6-4927-a752-a3a1ed737e11" width="200" height="400">
 &nbsp;&nbsp;
 <img src="https://github.com/whyisn/PetaniKita/assets/151505354/a695b48a-229e-4a2d-abb1-8a604c0d2c13" width="200" height="400">
-<br> 
-<br>
-<img src="https://github.com/whyisn/PetaniKita/assets/151505354/ba514a31-d5b0-4ef5-8da5-b90bf093b0aa" width="200" height="400">
 &nbsp;&nbsp;
-<img src="https://github.com/whyisn/PetaniKita/assets/151505354/fa7513b0-6979-4d54-b6ba-86b4af1ec636" width="200" height="400">
-
+<img src="https://github.com/whyisn/PetaniKita/assets/151505354/ba514a31-d5b0-4ef5-8da5-b90bf093b0aa" width="200" height="400">
+<br>
+<br>
+<p>
+<img src="https://raw.githubusercontent.com/Verruct51/PetaniKita/master/assets/1.jpeg" width="200" height="400">
+&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/Verruct51/PetaniKita/master/assets/2.jpeg" width="200" height="400">
+&nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/Verruct51/PetaniKita/master/assets/3.jpeg" width="200" height="400">
+</p>
 Login with:<br>
 Email: zoneofsimplesite@gmail.com<br>
 Pass: 123456<br>
@@ -46,7 +51,7 @@ You can also register or login with Google Account
 </details>
 
 ---
-<h1><b>Connect with Me</b></h1>
+<h1><b>Connect with Us</b></h1>
 <p align="center">
 <a href="https://www.instagram.com/petanikita.ofc/">
   <img border="0" alt="Hrugved's IG" src="https://img.icons8.com/doodle/38/000000/instagram--v1.png"/>
