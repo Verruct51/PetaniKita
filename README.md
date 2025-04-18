@@ -3,25 +3,26 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Architects+Daughter&color=00CC00&size=30&center=true&vCenter=true&width=600&height=65&lines=Haii,++Welcome++to++the++;CoFarm;Introducing,++we+are;++ZoSS++Team😉;Thanks++for++Visiting;"></a>
+  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Architects+Daughter&color=00CC00&size=30&center=true&vCenter=true&width=600&height=65&lines=Haii,++Welcome++to++the++;CoFarm++(Community+Farm);Introducing,++we+are;++TryError++Team😉;Thanks++for++Visiting;"></a>
 </p>
  
 ```
 ✍️ Created by Community Farm (TryError Team)
 ```
 
-<h2>🛠&nbsp;Description&nbsp;Community Farm</h2><details><summary></summary>
+<h2>🛠&nbsp;Description&nbsp;Community Farm</h2>
 <div align="justify">
 &nbsp;&nbsp;&nbsp;The innovative application "Community Farm" embraces the needs of farmers and the general public in improving the efficiency of managing agricultural activities. The app's soil mapping feature provides deep insights into the potential of the land, determining whether it is suitable for planting. The meticulous scheduling feature reminds users of the right time to apply pesticides, fertilize, water, and even the harvest schedule. The AI chatbot (Rani), can help users explore specific information about agriculture. And the app's article feature highlights success stories from farmers, improving the "perception" of the farming profession and hopefully inspiring young farmers to get more involved. <br><br>
 </div>
 
 ```
-Team : Community Farm Team
-Members : Ahmad Al-Hafidz Ramadhan
-          Alvin Anugerah Pratama
-          Ray Fadly Hadi
-          Wahyu Isnan
-          Yazid Aqil Assalam
+Team : TryError Team
+App  : CoFarm (Community Farm)
+Members : AHMAD AL-HAFIDZ RAMADHAN  [ Front-End ]
+          ALVIN ANUGERAH PRATAMA    [ Back-End  ]
+          RAY FADLY HADI            [ Front-End ]
+          WAHYU ISNAN               [ Back-End  ]
+          YAZID AQIL ASSALAM        [  Design   ]
 From : Universitas Negeri Padang
 ```
 
